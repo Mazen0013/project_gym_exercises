@@ -8,12 +8,20 @@ import HeroBanner from '../components/HeroBanner';
 
 
 const Home = () => {
+    // why i have these in the home because changes in these states are gonna be reflected all across my application not just in the searchExercises
+    const [bodyPart, setBodyPart] = useState('all')
+    const [exercises, setExercises] = useState([]);
+
     return (
         //wrapping everything inside the box and adding the three main components of the page//
         <Box>
              <HeroBanner />
-             <SearchExercises />
-             <Exercises />
+             <SearchExercises setExercises={setExercises} 
+              bodyPart={bodyPart} setBodyPart={setBodyPart} 
+              />
+             <Exercises setExercises={setExercises} 
+              bodyPart={bodyPart} setBodyPart={setBodyPart}
+              />
         </Box>
     )
 }
