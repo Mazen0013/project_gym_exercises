@@ -5,9 +5,7 @@ import Icon from "../assets/icons/gym.png";
 
 const BodyPart = ({ item, bodyPart, setBodyPart }) => {
   //importing the individual cards for each body part
-  console.log(bodyPart);
 
-  console.log(item);
   return (
     <Stack
       type="button"
