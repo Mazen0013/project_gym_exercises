@@ -25,12 +25,29 @@ const paginate = (e, value) => {
     // and to scroll to the top of the page
     window.scrollTo({ top:1800, behavior: 'smooth'})
 
-
 }
+// making the categories of body parts work 
+useEffect(() => {
+    const fetchExercisesData = async() => {
+        let exercisesData = [];
+
+        if (bodyPart === 'all') {
+            exercisesData = await fetchData(
+                "https://exercisedb.p.rapidapi.com/exercises?offset=0&limit=1500", exerciseOptions);
+        } else {
+            exercisesData = await fetchData(
+                `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}?offset=0&limit=1500`, exerciseOptions);
+        }
+        setExercises(exercisesData);
+    }
+    
+    // calling the function fetchExercisesData whenever the body part changes
+    fetchExercisesData();
+}, [bodyPart])
 
   return (
     <Box id="exercises" sx={{ mt: { lg: "110px" } }} mt="50px" p="20px">
-      <Typography variant="h3" mb="46px">
+      <Typography variant="h3" mb="46px" pl='20px'>
         Showing Results
       </Typography>
       <Stack
