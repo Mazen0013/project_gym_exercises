@@ -26,10 +26,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   const handleSearch = async () => {
     if (search) {
       // adding the offset and limit query parameters to specify the number of itmes returned
-      const exercisesData = await fetchData(
-        "https://exercisedb.p.rapidapi.com/exercises?offset=0&limit=1500",
-        exerciseOptions
-      );
+      const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises?offset=0&limit=1500', exerciseOptions);
 
       const searchedExercises = exercisesData.filter(
         (exercise) =>

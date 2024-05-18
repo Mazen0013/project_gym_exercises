@@ -33,10 +33,10 @@ useEffect(() => {
 
         if (bodyPart === 'all') {
             exercisesData = await fetchData(
-                "https://exercisedb.p.rapidapi.com/exercises?offset=0&limit=1500", exerciseOptions);
+                'https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
         } else {
             exercisesData = await fetchData(
-                `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}?offset=0&limit=1500`, exerciseOptions);
+                `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
         }
         setExercises(exercisesData);
     }
@@ -61,7 +61,7 @@ useEffect(() => {
             {currentExercises.map((exercise, index) => (
           // instead of showing the exercise.name, the ExerciseCard tag is added
           // <p>{exercise.name}</p>
-          <ExerciseCard key="index" exercise={exercise} />
+          <ExerciseCard key={index} exercise={exercise} />
         ))}
       </Stack>
       {/* implementing pagination using material ui in order to sor the results */}

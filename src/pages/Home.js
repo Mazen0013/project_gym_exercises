@@ -12,7 +12,7 @@ const Home = () => {
     const [bodyPart, setBodyPart] = useState('all')
     const [exercises, setExercises] = useState([]);
 
-    console.log(bodyPart);
+    console.log(exercises);
 
     return (
         //wrapping everything inside the box and adding the three main components of the page//
