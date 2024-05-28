@@ -2,7 +2,12 @@
 Gym Exercises
 
 ## Project description
-A project for a gym app with exercises to choose from and add to/personalize your routine. the idea came to me when i was at the gym thinking about my new gym plan. and i think it can be an amazing idea for an app especially made for gym enthusiasts, gym coaches  as well as professional bodybuilders. 
+A project for a gym app with exercises to choose from, depending on the body part or the target muscle. in addition, it offers instructions on how to do the exercises, similar exercises as well as youtube videos on how to do the exercise.  the idea came to me when i was at the gym thinking about my new gym plan that young people starting the gym need some guide on what to do and how to do it. and i think it can be an amazing idea for an app especially made for gym enthusiasts, gym coaches  as well as professional bodybuilders. 
+
+![home page](homepage.png)
+![ exercises ](exercises.png)
+![ exercises ](similar.png)
+![ exercises ](youtubevideos.png)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
